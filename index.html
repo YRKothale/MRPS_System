@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MRPS | Fixing the Foundation of Science</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        serif: ['"Crimson Pro"', 'serif'],
+                        mono: ['"IBM Plex Mono"', 'monospace'],
+                    },
+                    colors: {
+                        'ink': '#111111',
+                        'paper': '#fdfdfc',
+                        'subtle': '#666666'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-feature-settings: "kern", "liga";
+            -webkit-font-smoothing: antialiased;
+        }
+        /* Custom underline animation for links */
+        .hover-underline-animation {
+            display: inline-block;
+            position: relative;
+        }
+        .hover-underline-animation::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            transform: scaleX(0);
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #111;
+            transform-origin: bottom right;
+            transition: transform 0.25s ease-out;
+        }
+        .hover-underline-animation:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+        
+        /* Subtle fade in on load */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(10px);
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+        .delay-600 { animation-delay: 0.6s; }
+        
+        @keyframes fadeIn {
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Details Summary Marker Customization */
+        details > summary {
+            list-style: none;
+        }
+        details > summary::-webkit-details-marker {
+            display: none;
+        }
+    </style>
+</head>
+<body class="bg-paper text-ink font-serif text-lg md:text-xl leading-relaxed selection:bg-ink selection:text-paper">
+
+    <!-- Navigation -->
+    <nav class="w-full py-8 px-6 md:px-12 flex justify-between items-center fixed top-0 bg-paper/90 backdrop-blur-sm z-50">
+        <a href="#" class="font-mono text-sm tracking-tight font-medium hover-underline-animation">MRPS_SYSTEM_V1</a>
+        <div class="hidden md:flex gap-8 font-mono text-xs text-subtle uppercase tracking-widest">
+            <a href="#problem" class="hover:text-ink transition-colors">The Problem</a>
+            <a href="#solution" class="hover:text-ink transition-colors">Solution</a>
+            <a href="#network" class="hover:text-ink transition-colors">The Network</a>
+            <a href="#impact" class="hover:text-ink transition-colors">Impact</a>
+            <a href="#research" class="hover:text-ink transition-colors">Evidence</a>
+            <a href="mailto:partnerships@modernresearch.ai" class="text-ink border-b border-ink">Get Involved</a>
+        </div>
+    </nav>
+
+    <!-- Main Content Wrapper -->
+    <main class="max-w-4xl mx-auto px-6 pt-40 pb-24">
+
+        <!-- Hero Section -->
+        <header class="mb-32 fade-in">
+            <p class="font-mono text-xs text-subtle mb-6 uppercase tracking-widest">Institutional Overview</p>
+            <h1 class="text-5xl md:text-6xl font-light leading-[1.1] mb-8">
+                Fixing the foundation<br>of science.
+            </h1>
+            <p class="text-2xl text-subtle font-light italic">
+                Turning static papers into living, executable software.
+            </p>
+        </header>
+
+        <!-- The Problem -->
+        <section id="problem" class="mb-24 fade-in delay-100 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">01. The Gap</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="mb-8">
+                        We trust science to drive human progress, but the current system is broken. 
+                        Billions of dollars in funding are wasted trying to build on results that were never solid to begin with.
+                    </p>
+                    <ul class="space-y-8">
+                        <li class="block">
+                            <span class="font-medium block mb-1">The "Replication Crisis"</span>
+                            <span class="text-subtle">Over 70% of published experiments cannot be independently reproduced by other scientists.</span>
+                        </li>
+                        <li class="block">
+                            <span class="font-medium block mb-1">The PDF Problem</span>
+                            <span class="text-subtle">In 2026, we still share complex, data-driven discoveries as flat, static documents. It’s like reviewing software by looking at screenshots.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Solution -->
+        <section id="solution" class="mb-24 fade-in delay-200 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">02. Executable Research</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="mb-8 font-medium text-2xl leading-normal">
+                        Think of it as GitHub meets Academic Publishing.
+                    </p>
+                    <p class="mb-8">
+                        The <strong>Modern Research Publication & Simulation System (MRPS)</strong> turns static papers into executable software. Instead of reading a claim, a reviewer clicks "Run." The system spins up a simulation, feeds in the data, and proves the math works.
+                    </p>
+                    
+                    <div class="bg-gray-50 p-8 my-8 border border-gray-100">
+                        <h3 class="font-mono text-xs uppercase tracking-widest mb-4 text-subtle">The Verification Breakthrough</h3>
+                        <p class="text-base text-ink mb-4">
+                            The biggest barrier to open science is privacy (e.g., patient records or IP).
+                        </p>
+                        <p class="text-base text-subtle">
+                            Our system acts as a neutral third party. We verify the <em>process</em>, not just the raw data. It runs code inside a secure "black box," confirms the results match the paper, and issues a "Verified" stamp—without ever exposing sensitive data.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- The Knowledge Network -->
+        <section id="network" class="mb-24 fade-in delay-300 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">03. The Knowledge Map</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="mb-8 font-medium text-2xl leading-normal">
+                        From isolated papers to an interconnected global brain.
+                    </p>
+                    <p class="mb-8">
+                        Science today is fragmented. A biologist in Tokyo might not know that a chemist in Berlin has solved a key piece of their puzzle. MRPS changes this by building a semantic map in the background.
+                    </p>
+                    
+                    <div class="grid gap-8">
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">Cross-Domain Interlinking</h3>
+                            <p class="text-subtle text-base">
+                                As research is uploaded, the system automatically identifies connections across disparate fields (e.g., Physics linking to Biology). It creates a living graph of knowledge, revealing hidden dependencies that human researchers might miss.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">Intelligent Partnership</h3>
+                            <p class="text-subtle text-base">
+                                The system proactively suggests collaborations. If you upload a model that aligns with another ongoing study, MRPS alerts both parties: <em class="text-ink">"Potential Synergy Detected."</em> This turns competition into collaboration.
+                            </p>
+                        </div>
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">The Path to Autonomous Science</h3>
+                            <p class="text-subtle text-base">
+                                By structuring data into a universal map, we are laying the foundation for AI agents that can traverse this graph, hypothesize new connections, and eventually conduct autonomous "in-silico" experiments.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section (Restored 4 Sectors) -->
+        <section id="impact" class="mb-24 fade-in delay-400 border-t border-gray-200 pt-12">
+             <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">04. Sector Impact</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
+                        <!-- Sector 1 -->
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">Pharma & Biotech</h3>
+                            <p class="text-subtle text-base">
+                                <strong class="text-ink">Risk Reduction.</strong> Before licensing a discovery, companies can use our secure sandboxes to validate the computational model works as claimed, without requiring the university to hand over full IP/datasets immediately.
+                            </p>
+                        </div>
+                        <!-- Sector 2 -->
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">AI & Machine Learning</h3>
+                            <p class="text-subtle text-base">
+                                <strong class="text-ink">Reproducible Benchmarks.</strong> MRPS treats research as containerized software. This ensures that an AI model claiming 95% accuracy can be run in an identical environment, eliminating "it works on my machine" issues.
+                            </p>
+                        </div>
+                        <!-- Sector 3 -->
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">Academic Institutions</h3>
+                            <p class="text-subtle text-base">
+                                <strong class="text-ink">Reputation & Compliance.</strong> The system automates compliance with strict open-science mandates (FAIR principles) and acts as a "pre-flight check" to prevent high-profile retractions.
+                            </p>
+                        </div>
+                         <!-- Sector 4 -->
+                        <div>
+                            <h3 class="font-serif text-2xl italic mb-3">Public Policy</h3>
+                            <p class="text-subtle text-base">
+                                <strong class="text-ink">Auditable Evidence.</strong> Policymakers receive interactive simulations, not static PDFs. They can stress-test assumptions (e.g., "What if inflation rises by 2%?") directly within the verifiable research object.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Vision/Roadmap -->
+        <section id="vision" class="mb-24 fade-in delay-500 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">05. Roadmap</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <div class="space-y-6 font-mono text-sm">
+                        <div class="flex gap-4 items-baseline">
+                            <span class="text-subtle">PHASE 1</span>
+                            <span>Validate platform with Systems Biology.</span>
+                        </div>
+                        <div class="flex gap-4 items-baseline">
+                            <span class="text-subtle">PHASE 2</span>
+                            <span>Scale to Physics, Chemistry, and AI research.</span>
+                        </div>
+                        <div class="flex gap-4 items-baseline">
+                            <span class="text-subtle">PHASE 3</span>
+                            <span>Establish global infrastructure for "Verified" research.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Evidence/Research Section (Click and Expand) -->
+        <section id="research" class="mb-24 fade-in delay-600 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">06. Evidence</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="mb-12">
+                        The MRPS architecture is not theoretical. It is built upon verified research into the crises of reproducibility and the future of autonomous discovery.
+                    </p>
+
+                    <div class="space-y-4">
+                        
+                        <!-- 1. The Crisis -->
+                        <details class="group border border-gray-200 bg-white open:bg-gray-50 transition-all">
+                            <summary class="flex justify-between items-center cursor-pointer p-6 list-none">
+                                <span class="font-serif text-xl italic">Validating the "Reproducibility Crisis"</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-base text-subtle space-y-6 border-t border-gray-100 pt-6">
+                                <div>
+                                    <a href="https://www.nature.com/articles/533452a" target="_blank" class="block font-medium text-ink hover:underline">The Nature Survey (2016) ↗</a>
+                                    <p class="mt-1">Confirmed that 70% of researchers have failed to reproduce another scientist's experiments. Identified "unavailable code/data" as a primary cause.</p>
+                                </div>
+                                <div>
+                                    <a href="https://elifesciences.org/articles/71601" target="_blank" class="block font-medium text-ink hover:underline">Cancer Biology Reproducibility (2021) ↗</a>
+                                    <p class="mt-1">Only 46% of high-impact cancer studies could be successfully replicated, validating the urgent need for our pre-clinical verification sandboxes.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.science.org/doi/10.1126/science.aac4716" target="_blank" class="block font-medium text-ink hover:underline">Psychology Replication Project (2015) ↗</a>
+                                    <p class="mt-1">Found that only 36% of psychology studies could be replicated, galvanizing the movement for Open Science mandates.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- 2. Executable Research -->
+                        <details class="group border border-gray-200 bg-white open:bg-gray-50 transition-all">
+                            <summary class="flex justify-between items-center cursor-pointer p-6 list-none">
+                                <span class="font-serif text-xl italic">Executable Research & FAIR Principles</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-base text-subtle space-y-6 border-t border-gray-100 pt-6">
+                                <div>
+                                    <a href="https://www.science.org/doi/10.1126/science.1213847" target="_blank" class="block font-medium text-ink hover:underline">The Case for Executable Papers (Science, 2011) ↗</a>
+                                    <p class="mt-1">Established that "the code and data are the actual scholarship," and the PDF is merely the "advertisement." This is the core philosophy of our Interface Layer.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.nature.com/articles/sdata201618" target="_blank" class="block font-medium text-ink hover:underline">The FAIR Guiding Principles (2016) ↗</a>
+                                    <p class="mt-1">The global standard (Findable, Accessible, Interoperable, Reusable) that mandates data must be machine-actionable. MRPS automates this compliance.</p>
+                                </div>
+                                <div>
+                                    <a href="https://ebooks.iospress.nl/publication/42900" target="_blank" class="block font-medium text-ink hover:underline">Jupyter Notebooks as Publications (2016) ↗</a>
+                                    <p class="mt-1">Validated that interactive, code-embedded documents significantly improve peer review and understanding compared to static text.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                        <!-- 3. Autonomous Science -->
+                        <details class="group border border-gray-200 bg-white open:bg-gray-50 transition-all">
+                            <summary class="flex justify-between items-center cursor-pointer p-6 list-none">
+                                <span class="font-serif text-xl italic">Autonomous Discovery & AI</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-base text-subtle space-y-6 border-t border-gray-100 pt-6">
+                                <div>
+                                    <a href="https://royalsocietypublishing.org/doi/10.1098/rsif.2014.1289" target="_blank" class="block font-medium text-ink hover:underline">The Robot Scientist "Eve" (2015) ↗</a>
+                                    <p class="mt-1">Proved that AI systems can autonomously hypothesize and execute experiments if data is structured correctly in a Knowledge Graph (our Phase 3 goal).</p>
+                                </div>
+                                <div>
+                                    <a href="https://academic.oup.com/bioinformatics/article/35/24/5191/5520638" target="_blank" class="block font-medium text-ink hover:underline">Knowledge Graphs for Drug Repurposing (2020) ↗</a>
+                                    <p class="mt-1">Validates that linking disparate data types (drugs, diseases, targets) in a network graph allows AI to predict new uses for old drugs—exactly the "Cross-Domain Innovation" use case MRPS supports.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.scientificamerican.com/article/the-semantic-web/" target="_blank" class="block font-medium text-ink hover:underline">The Semantic Web (2001) ↗</a>
+                                    <p class="mt-1">The foundational vision of making data "machine-readable." MRPS implements this by mapping simulation parameters to ontologies.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                         <!-- 4. Technical Architecture -->
+                         <details class="group border border-gray-200 bg-white open:bg-gray-50 transition-all">
+                            <summary class="flex justify-between items-center cursor-pointer p-6 list-none">
+                                <span class="font-serif text-xl italic">Technical & Privacy Validation</span>
+                                <span class="transition group-open:rotate-180">
+                                    <svg fill="none" height="24" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24" width="24"><path d="M6 9l6 6 6-6"></path></svg>
+                                </span>
+                            </summary>
+                            <div class="px-6 pb-6 text-base text-subtle space-y-6 border-t border-gray-100 pt-6">
+                                <div>
+                                    <a href="https://academic.oup.com/bioinformatics/article/33/16/2580/3096436" target="_blank" class="block font-medium text-ink hover:underline">BioContainers (2017) ↗</a>
+                                    <p class="mt-1">Shows that using Docker containers for scientific tools (like the COPASI engines used in MRPS) solves dependency hell and ensures long-term reproducibility.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.nature.com/articles/s41551-021-00751-8" target="_blank" class="block font-medium text-ink hover:underline">Synthetic Data in Clinical Trials (2021) ↗</a>
+                                    <p class="mt-1">Demonstrates that synthetic data (statistically identical to real data but containing no real patient info) can be used to validate models without privacy leaks.</p>
+                                </div>
+                                <div>
+                                    <a href="https://www.w3.org/TR/prov-o/" target="_blank" class="block font-medium text-ink hover:underline">W3C PROV-O Standard ↗</a>
+                                    <p class="mt-1">The international standard for interchange of provenance information. MRPS uses this for "Cryptographic Provenance" to ensure audit trails.</p>
+                                </div>
+                            </div>
+                        </details>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="pt-24 pb-12 border-t border-gray-200 text-center">
+            <p class="font-serif italic text-xl mb-8">Let's build the backbone of trustworthy science.</p>
+            <a href="mailto:partnerships@modernresearch.ai" class="inline-block font-mono text-sm border border-ink px-6 py-3 hover:bg-ink hover:text-paper transition-all uppercase tracking-widest">
+                partnerships@modernresearch.ai
+            </a>
+            <div class="mt-12 text-xs font-mono text-subtle">
+                &copy; 2026 Modern Research Publication & Simulation System
+            </div>
+        </footer>
+
+    </main>
+
+</body>
+</html>
