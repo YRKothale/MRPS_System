@@ -65,6 +65,7 @@
         .delay-400 { animation-delay: 0.4s; }
         .delay-500 { animation-delay: 0.5s; }
         .delay-600 { animation-delay: 0.6s; }
+        .delay-700 { animation-delay: 0.7s; }
         
         @keyframes fadeIn {
             to { opacity: 1; transform: translateY(0); }
@@ -84,10 +85,11 @@
     <!-- Navigation -->
     <nav class="w-full py-8 px-6 md:px-12 flex justify-between items-center fixed top-0 bg-paper/90 backdrop-blur-sm z-50">
         <a href="#" class="font-mono text-sm tracking-tight font-medium hover-underline-animation">MRPS_SYSTEM_V1</a>
-        <div class="hidden md:flex gap-8 font-mono text-xs text-subtle uppercase tracking-widest">
+        <div class="hidden md:flex gap-6 font-mono text-xs text-subtle uppercase tracking-widest">
             <a href="#problem" class="hover:text-ink transition-colors">The Problem</a>
             <a href="#solution" class="hover:text-ink transition-colors">Solution</a>
             <a href="#network" class="hover:text-ink transition-colors">The Network</a>
+            <a href="#autonomy" class="hover:text-ink transition-colors">Autonomy</a>
             <a href="#impact" class="hover:text-ink transition-colors">Impact</a>
             <a href="#research" class="hover:text-ink transition-colors">Evidence</a>
             <a href="mailto:partnerships@modernresearch.ai" class="text-ink border-b border-ink">Get Involved</a>
@@ -198,11 +200,31 @@
             </div>
         </section>
 
-        <!-- Impact Section (Restored 4 Sectors) -->
-        <section id="impact" class="mb-24 fade-in delay-400 border-t border-gray-200 pt-12">
+        <!-- Autonomous Science (New Section) -->
+        <section id="autonomy" class="mb-24 fade-in delay-400 border-t border-gray-200 pt-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="md:col-span-1">
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">04. Autonomy</h2>
+                </div>
+                <div class="md:col-span-3">
+                    <p class="mb-8 font-medium text-2xl leading-normal">
+                        The infrastructure for autonomous science.
+                    </p>
+                    <p class="mb-8 text-xl text-ink">
+                        The future of discovery isn't human-only. MRPS is the foundational protocol for the next decade of automated research. 
+                    </p>
+                    <p class="text-subtle">
+                        By moving away from static, human-readable PDFs to a dynamic, machine-readable context layer, we provide the native environment where autonomous AI agents can seamlessly query, execute, verify, and publish structured scientific knowledge.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section (Shifted to 05) -->
+        <section id="impact" class="mb-24 fade-in delay-500 border-t border-gray-200 pt-12">
              <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-1">
-                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">04. Sector Impact</h2>
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">05. Sector Impact</h2>
                 </div>
                 <div class="md:col-span-3">
                     <div class="grid md:grid-cols-2 gap-x-8 gap-y-12">
@@ -239,11 +261,11 @@
             </div>
         </section>
 
-        <!-- Vision/Roadmap -->
-        <section id="vision" class="mb-24 fade-in delay-500 border-t border-gray-200 pt-12">
+        <!-- Vision/Roadmap (Shifted to 06) -->
+        <section id="vision" class="mb-24 fade-in delay-600 border-t border-gray-200 pt-12">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-1">
-                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">05. Roadmap</h2>
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">06. Roadmap</h2>
                 </div>
                 <div class="md:col-span-3">
                     <div class="space-y-6 font-mono text-sm">
@@ -264,11 +286,11 @@
             </div>
         </section>
 
-        <!-- Evidence/Research Section (Click and Expand) -->
-        <section id="research" class="mb-24 fade-in delay-600 border-t border-gray-200 pt-12">
+        <!-- Evidence/Research Section (Shifted to 07) -->
+        <section id="research" class="mb-24 fade-in delay-700 border-t border-gray-200 pt-12">
             <div class="grid md:grid-cols-4 gap-8">
                 <div class="md:col-span-1">
-                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">06. Evidence</h2>
+                    <h2 class="font-mono text-xs uppercase tracking-widest text-subtle sticky top-24">07. Evidence</h2>
                 </div>
                 <div class="md:col-span-3">
                     <p class="mb-12">
